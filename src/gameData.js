@@ -1,7 +1,7 @@
 export const gameItems = [
   "Atestado de vacina que não é válido na CLT",
   "Um cafezin",
-  "Ar-condicionado quebrado em 17 °C",
+  "Ar-condicionado quebrado em 17°C",
   "Fone de ouvido quebrado de um lado",
   "Post-it que não gruda",
   "A hora de ir embora",

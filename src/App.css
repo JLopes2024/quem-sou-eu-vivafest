@@ -1,6 +1,6 @@
-/* ==========================================
-   VARIÁVEIS
-========================================== */
+/* =====================================================
+   CORES
+===================================================== */
 
 :root {
   --navy: #14213d;
@@ -12,9 +12,10 @@
   --black: #111111;
 }
 
-/* ==========================================
+
+/* =====================================================
    ESTRUTURA
-========================================== */
+===================================================== */
 
 .screen {
   width: 100vw;
@@ -25,9 +26,10 @@
   overflow: hidden;
 }
 
-/* ==========================================
-   INÍCIO
-========================================== */
+
+/* =====================================================
+   TELA INICIAL
+===================================================== */
 
 .start-screen {
   display: flex;
@@ -54,11 +56,10 @@
 .start-content {
   width: min(520px, 100%);
 
-  text-align: center;
-
   position: relative;
-
   z-index: 5;
+
+  text-align: center;
 }
 
 .event-tag {
@@ -69,6 +70,7 @@
   margin-bottom: 18px;
 
   background: var(--navy);
+
   color: var(--white);
 
   font-size: 0.8rem;
@@ -77,6 +79,8 @@
 }
 
 .eyebrow {
+  margin-bottom: 10px;
+
   color: var(--pink);
 
   font-size: 0.85rem;
@@ -84,8 +88,6 @@
   font-weight: 900;
 
   letter-spacing: 4px;
-
-  margin-bottom: 10px;
 }
 
 .game-title {
@@ -93,13 +95,14 @@
 
   flex-direction: column;
 
-  font-size: clamp(4rem, 17vw, 7rem);
+  color: var(--navy);
+
+  font-size:
+    clamp(4rem, 17vw, 7rem);
 
   line-height: 0.76;
 
   letter-spacing: -5px;
-
-  color: var(--navy);
 
   transform: rotate(-2deg);
 }
@@ -113,23 +116,28 @@
 
   margin: 30px auto;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   font-size: 0.95rem;
 
-  line-height: 1.5;
-
   font-weight: 700;
+
+  line-height: 1.5;
 }
 
-/* ==========================================
+
+/* =====================================================
    CARDS
-========================================== */
+===================================================== */
 
 .info-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
   gap: 8px;
 
@@ -144,12 +152,12 @@
   flex-direction: column;
 
   justify-content: center;
-
   align-items: center;
 
   padding: 10px;
 
-  border: 3px solid var(--navy);
+  border:
+    3px solid var(--navy);
 }
 
 .info-card strong {
@@ -159,7 +167,10 @@
 .info-card span {
   margin-top: 5px;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   font-size: 0.7rem;
 
@@ -178,16 +189,17 @@
   background: var(--pink);
 }
 
-/* ==========================================
-   BOTÕES
-========================================== */
+
+/* =====================================================
+   BOTÃO PRINCIPAL
+===================================================== */
 
 .primary-button {
   width: 100%;
 
-  border: none;
-
   padding: 19px 20px;
+
+  border: none;
 
   background: var(--navy);
 
@@ -195,21 +207,26 @@
 
   cursor: pointer;
 
-  font-weight: 900;
-
   font-size: 1.1rem;
+
+  font-weight: 900;
 
   letter-spacing: 2px;
 
-  box-shadow: 7px 7px 0 var(--yellow);
+  box-shadow:
+    7px 7px 0 var(--yellow);
 
-  transition: 0.15s;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
 .primary-button:active {
-  transform: translate(4px, 4px);
+  transform:
+    translate(4px, 4px);
 
-  box-shadow: 3px 3px 0 var(--yellow);
+  box-shadow:
+    3px 3px 0 var(--yellow);
 }
 
 .secondary-button {
@@ -219,33 +236,40 @@
 
   padding: 15px;
 
-  background: transparent;
+  border:
+    3px solid var(--navy);
 
-  border: 3px solid var(--navy);
+  background: transparent;
 
   color: var(--navy);
 
-  font-weight: 900;
-
   cursor: pointer;
+
+  font-weight: 900;
 }
 
 .start-tip {
   margin-top: 22px;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   font-size: 0.76rem;
 
   opacity: 0.65;
 }
 
-/* ==========================================
-   ELEMENTOS DECORATIVOS
-========================================== */
+
+/* =====================================================
+   FORMAS DECORATIVAS
+===================================================== */
 
 .shape {
   position: absolute;
+
+  pointer-events: none;
 }
 
 .shape-yellow {
@@ -279,20 +303,21 @@
   right: 6%;
   top: 7%;
 
-  border: 12px solid var(--cyan);
+  border:
+    12px solid var(--cyan);
 
   transform: rotate(12deg);
 }
 
-/* ==========================================
-   COUNTDOWN
-========================================== */
+
+/* =====================================================
+   CONTAGEM
+===================================================== */
 
 .countdown-screen {
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
   background: var(--navy);
@@ -307,11 +332,12 @@
 }
 
 .countdown-message {
-  font-size: clamp(1rem, 4vw, 1.5rem);
-
-  letter-spacing: 3px;
+  font-size:
+    clamp(1rem, 4vw, 1.5rem);
 
   font-weight: 900;
+
+  letter-spacing: 3px;
 }
 
 .countdown-number {
@@ -319,19 +345,25 @@
 
   color: var(--yellow);
 
-  font-size: clamp(10rem, 55vw, 24rem);
+  font-size:
+    clamp(10rem, 55vw, 24rem);
 
   font-weight: 900;
 
   line-height: 0.8;
 
-  text-shadow: 7px 7px 0 var(--pink);
+  text-shadow:
+    7px 7px 0 var(--pink);
 
-  animation: countdownPulse 1s ease;
+  animation:
+    countdownPulse 1s ease;
 }
 
 .countdown-tip {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   opacity: 0.8;
 }
@@ -354,33 +386,35 @@
   }
 }
 
-/* ==========================================
+
+/* =====================================================
    JOGO
-========================================== */
+===================================================== */
 
 .game-screen {
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
   background: var(--navy);
 }
 
-/* ==========================================
+
+/* =====================================================
    PORTRAIT
 
-   O navegador ainda está vertical.
-   Então rotacionamos a "carta" 90 graus.
-========================================== */
+   Se o navegador ainda estiver vertical,
+   rotacionamos a tela do jogo.
+===================================================== */
 
 @media (orientation: portrait) {
+
   .game-card {
+    position: absolute;
+
     width: 100dvh;
     height: 100vw;
-
-    position: absolute;
 
     display: flex;
 
@@ -393,17 +427,22 @@
     transform: rotate(90deg);
 
     transform-origin: center;
+
+    overflow: hidden;
   }
+
 }
 
-/* ==========================================
+
+/* =====================================================
    LANDSCAPE
 
-   Se o navegador já virou junto com o
-   celular, não fazemos outra rotação.
-========================================== */
+   Se o celular já estiver horizontal,
+   não rotacionamos novamente.
+===================================================== */
 
 @media (orientation: landscape) {
+
   .game-card {
     width: 100vw;
     height: 100dvh;
@@ -412,24 +451,30 @@
 
     flex-direction: column;
 
-    padding: 24px 32px;
+    padding:
+      22px
+      30px;
 
     background: var(--yellow);
 
     transform: none;
+
+    overflow: hidden;
   }
+
 }
 
-/* ==========================================
+
+/* =====================================================
    CABEÇALHO
-========================================== */
+===================================================== */
 
 .game-header {
   display: flex;
 
-  align-items: center;
-
   justify-content: space-between;
+
+  align-items: center;
 
   flex-shrink: 0;
 }
@@ -441,7 +486,12 @@
 
   color: white;
 
-  font-size: clamp(0.6rem, 2vw, 0.9rem);
+  font-size:
+    clamp(
+      0.6rem,
+      2vw,
+      0.9rem
+    );
 
   letter-spacing: 2px;
 }
@@ -449,13 +499,19 @@
 .timer {
   padding: 7px 13px;
 
-  border: 3px solid var(--navy);
+  border:
+    3px solid var(--navy);
 
   background: white;
 
   color: var(--navy);
 
-  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-size:
+    clamp(
+      1rem,
+      3vw,
+      1.4rem
+    );
 
   font-weight: 900;
 }
@@ -465,36 +521,50 @@
 
   color: white;
 
-  animation: timerPulse 0.6s infinite alternate;
+  animation:
+    timerPulse
+    0.6s
+    infinite
+    alternate;
 }
 
 @keyframes timerPulse {
+
   to {
-    transform: scale(1.08);
+    transform:
+      scale(1.08);
   }
+
 }
 
-/* ==========================================
-   PERGUNTA
-========================================== */
+
+/* =====================================================
+   LABEL
+===================================================== */
 
 .challenge-label {
-  margin-top: 10px;
+  margin-top: 8px;
 
   text-align: center;
 
   color: var(--pink);
 
-  font-size: clamp(0.65rem, 2vw, 0.95rem);
+  font-size:
+    clamp(
+      0.65rem,
+      2vw,
+      0.95rem
+    );
 
   font-weight: 900;
 
   letter-spacing: 5px;
 }
 
-/* ==========================================
+
+/* =====================================================
    RESPOSTA
-========================================== */
+===================================================== */
 
 .answer {
   flex: 1;
@@ -504,10 +574,11 @@
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
-  padding: 20px 40px;
+  padding:
+    16px
+    35px;
 
   color: var(--navy);
 
@@ -515,7 +586,12 @@
 
   text-transform: uppercase;
 
-  font-size: clamp(2.3rem, 7vw, 6.5rem);
+  font-size:
+    clamp(
+      2.2rem,
+      7vw,
+      6.5rem
+    );
 
   font-weight: 1000;
 
@@ -526,9 +602,10 @@
   text-wrap: balance;
 }
 
-/* ==========================================
-   RODAPÉ
-========================================== */
+
+/* =====================================================
+   RODAPÉ DO JOGO
+===================================================== */
 
 .game-footer {
   display: flex;
@@ -542,37 +619,105 @@
   flex-shrink: 0;
 }
 
-.game-footer > span {
-  font-size: clamp(0.5rem, 1.3vw, 0.8rem);
+.game-hint {
+  font-size:
+    clamp(
+      0.48rem,
+      1.3vw,
+      0.78rem
+    );
 
   letter-spacing: 2px;
 }
 
-.finish-button {
+
+/* =====================================================
+   ACERTO / ERRO
+===================================================== */
+
+.answer-buttons {
+  display: flex;
+
+  gap: 10px;
+
   flex-shrink: 0;
+}
 
-  padding: 10px 16px;
+.correct-button,
+.wrong-button {
+  min-width: 125px;
 
-  border: 3px solid var(--navy);
+  display: flex;
 
-  background: var(--cyan);
+  justify-content: center;
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    11px
+    17px;
+
+  border:
+    3px solid var(--navy);
 
   color: var(--navy);
 
+  cursor: pointer;
+
+  font-size:
+    clamp(
+      0.7rem,
+      1.6vw,
+      0.95rem
+    );
+
   font-weight: 900;
 
-  cursor: pointer;
+  box-shadow:
+    4px
+    4px
+    0
+    var(--navy);
+
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
 }
 
-/* ==========================================
+.correct-button {
+  background: var(--cyan);
+}
+
+.wrong-button {
+  background: var(--pink);
+}
+
+.correct-button:active,
+.wrong-button:active {
+  transform:
+    translate(3px, 3px);
+
+  box-shadow:
+    1px
+    1px
+    0
+    var(--navy);
+}
+
+.button-icon {
+  font-size: 1.1rem;
+}
+
+
+/* =====================================================
    RESULTADO
-========================================== */
+===================================================== */
 
 .result-screen {
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
   padding: 30px;
@@ -583,13 +728,19 @@
 }
 
 .result-content {
-  width: min(520px, 100%);
+  width:
+    min(520px, 100%);
 }
 
 .result-title {
   color: var(--navy);
 
-  font-size: clamp(3rem, 12vw, 5.5rem);
+  font-size:
+    clamp(
+      3rem,
+      12vw,
+      5.5rem
+    );
 
   line-height: 0.9;
 }
@@ -598,26 +749,42 @@
   color: var(--pink);
 }
 
+.result-title.error {
+  color: var(--pink);
+}
+
 .result-label {
   margin-top: 35px;
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 
   opacity: 0.65;
 }
 
 .result-answer {
-  margin: 12px 0 35px;
+  margin:
+    12px
+    0
+    35px;
 
   padding: 20px;
 
-  border: 4px solid var(--navy);
+  border:
+    4px solid var(--navy);
 
   background: var(--yellow);
 
   color: var(--navy);
 
-  font-size: clamp(1.5rem, 7vw, 2.7rem);
+  font-size:
+    clamp(
+      1.5rem,
+      7vw,
+      2.7rem
+    );
 
   font-weight: 900;
 
@@ -626,13 +793,19 @@
   text-transform: uppercase;
 }
 
-/* ==========================================
-   AJUSTES CELULARES MENORES
-========================================== */
 
-@media (max-height: 680px) and (orientation: portrait) {
+/* =====================================================
+   CELULARES MENORES
+===================================================== */
+
+@media
+  (max-height: 680px)
+  and
+  (orientation: portrait) {
+
   .description {
-    margin: 18px auto;
+    margin:
+      18px auto;
   }
 
   .info-grid {
@@ -642,4 +815,47 @@
   .start-tip {
     margin-top: 14px;
   }
+
+}
+
+
+/* =====================================================
+   LANDSCAPE BAIXO
+===================================================== */
+
+@media
+  (max-height: 500px)
+  and
+  (orientation: landscape) {
+
+  .game-card {
+    padding:
+      14px
+      24px;
+  }
+
+  .challenge-label {
+    margin-top: 3px;
+  }
+
+  .answer {
+    padding:
+      5px
+      30px;
+
+    font-size:
+      clamp(
+        2rem,
+        6vw,
+        5rem
+      );
+  }
+
+  .correct-button,
+  .wrong-button {
+    padding:
+      8px
+      14px;
+  }
+
 }
