@@ -1,0 +1,645 @@
+/* ==========================================
+   VARIÁVEIS
+========================================== */
+
+:root {
+  --navy: #14213d;
+  --cyan: #25c3ca;
+  --yellow: #ffd438;
+  --pink: #ff5a8d;
+  --paper: #f8f3e4;
+  --white: #ffffff;
+  --black: #111111;
+}
+
+/* ==========================================
+   ESTRUTURA
+========================================== */
+
+.screen {
+  width: 100vw;
+  height: 100dvh;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* ==========================================
+   INÍCIO
+========================================== */
+
+.start-screen {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 28px;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(37, 195, 202, 0.14),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(255, 90, 141, 0.15),
+      transparent 25%
+    ),
+    var(--paper);
+}
+
+.start-content {
+  width: min(520px, 100%);
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 5;
+}
+
+.event-tag {
+  display: inline-block;
+
+  padding: 8px 16px;
+
+  margin-bottom: 18px;
+
+  background: var(--navy);
+  color: var(--white);
+
+  font-size: 0.8rem;
+
+  letter-spacing: 3px;
+}
+
+.eyebrow {
+  color: var(--pink);
+
+  font-size: 0.85rem;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 10px;
+}
+
+.game-title {
+  display: flex;
+
+  flex-direction: column;
+
+  font-size: clamp(4rem, 17vw, 7rem);
+
+  line-height: 0.76;
+
+  letter-spacing: -5px;
+
+  color: var(--navy);
+
+  transform: rotate(-2deg);
+}
+
+.game-title span {
+  color: var(--cyan);
+}
+
+.description {
+  max-width: 420px;
+
+  margin: 30px auto;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.95rem;
+
+  line-height: 1.5;
+
+  font-weight: 700;
+}
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.info-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  margin-bottom: 28px;
+}
+
+.info-card {
+  min-height: 85px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 10px;
+
+  border: 3px solid var(--navy);
+}
+
+.info-card strong {
+  font-size: 1.35rem;
+}
+
+.info-card span {
+  margin-top: 5px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+}
+
+.yellow {
+  background: var(--yellow);
+}
+
+.cyan {
+  background: var(--cyan);
+}
+
+.pink {
+  background: var(--pink);
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.primary-button {
+  width: 100%;
+
+  border: none;
+
+  padding: 19px 20px;
+
+  background: var(--navy);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: 900;
+
+  font-size: 1.1rem;
+
+  letter-spacing: 2px;
+
+  box-shadow: 7px 7px 0 var(--yellow);
+
+  transition: 0.15s;
+}
+
+.primary-button:active {
+  transform: translate(4px, 4px);
+
+  box-shadow: 3px 3px 0 var(--yellow);
+}
+
+.secondary-button {
+  width: 100%;
+
+  margin-top: 20px;
+
+  padding: 15px;
+
+  background: transparent;
+
+  border: 3px solid var(--navy);
+
+  color: var(--navy);
+
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+.start-tip {
+  margin-top: 22px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-size: 0.76rem;
+
+  opacity: 0.65;
+}
+
+/* ==========================================
+   ELEMENTOS DECORATIVOS
+========================================== */
+
+.shape {
+  position: absolute;
+}
+
+.shape-yellow {
+  width: 170px;
+  height: 38px;
+
+  top: 8%;
+  left: -35px;
+
+  background: var(--yellow);
+
+  transform: rotate(-12deg);
+}
+
+.shape-pink {
+  width: 170px;
+  height: 45px;
+
+  right: -40px;
+  bottom: 14%;
+
+  background: var(--pink);
+
+  transform: rotate(18deg);
+}
+
+.shape-cyan {
+  width: 70px;
+  height: 70px;
+
+  right: 6%;
+  top: 7%;
+
+  border: 12px solid var(--cyan);
+
+  transform: rotate(12deg);
+}
+
+/* ==========================================
+   COUNTDOWN
+========================================== */
+
+.countdown-screen {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: var(--navy);
+
+  color: white;
+
+  text-align: center;
+}
+
+.countdown-content {
+  padding: 30px;
+}
+
+.countdown-message {
+  font-size: clamp(1rem, 4vw, 1.5rem);
+
+  letter-spacing: 3px;
+
+  font-weight: 900;
+}
+
+.countdown-number {
+  margin: 25px 0;
+
+  color: var(--yellow);
+
+  font-size: clamp(10rem, 55vw, 24rem);
+
+  font-weight: 900;
+
+  line-height: 0.8;
+
+  text-shadow: 7px 7px 0 var(--pink);
+
+  animation: countdownPulse 1s ease;
+}
+
+.countdown-tip {
+  font-family: Arial, Helvetica, sans-serif;
+
+  opacity: 0.8;
+}
+
+@keyframes countdownPulse {
+  from {
+    opacity: 0;
+
+    transform: scale(0.6);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.1);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* ==========================================
+   JOGO
+========================================== */
+
+.game-screen {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: var(--navy);
+}
+
+/* ==========================================
+   PORTRAIT
+
+   O navegador ainda está vertical.
+   Então rotacionamos a "carta" 90 graus.
+========================================== */
+
+@media (orientation: portrait) {
+  .game-card {
+    width: 100dvh;
+    height: 100vw;
+
+    position: absolute;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 22px;
+
+    background: var(--yellow);
+
+    transform: rotate(90deg);
+
+    transform-origin: center;
+  }
+}
+
+/* ==========================================
+   LANDSCAPE
+
+   Se o navegador já virou junto com o
+   celular, não fazemos outra rotação.
+========================================== */
+
+@media (orientation: landscape) {
+  .game-card {
+    width: 100vw;
+    height: 100dvh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 24px 32px;
+
+    background: var(--yellow);
+
+    transform: none;
+  }
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.game-header {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex-shrink: 0;
+}
+
+.mini-logo {
+  padding: 8px 13px;
+
+  background: var(--navy);
+
+  color: white;
+
+  font-size: clamp(0.6rem, 2vw, 0.9rem);
+
+  letter-spacing: 2px;
+}
+
+.timer {
+  padding: 7px 13px;
+
+  border: 3px solid var(--navy);
+
+  background: white;
+
+  color: var(--navy);
+
+  font-size: clamp(1rem, 3vw, 1.4rem);
+
+  font-weight: 900;
+}
+
+.timer-warning {
+  background: var(--pink);
+
+  color: white;
+
+  animation: timerPulse 0.6s infinite alternate;
+}
+
+@keyframes timerPulse {
+  to {
+    transform: scale(1.08);
+  }
+}
+
+/* ==========================================
+   PERGUNTA
+========================================== */
+
+.challenge-label {
+  margin-top: 10px;
+
+  text-align: center;
+
+  color: var(--pink);
+
+  font-size: clamp(0.65rem, 2vw, 0.95rem);
+
+  font-weight: 900;
+
+  letter-spacing: 5px;
+}
+
+/* ==========================================
+   RESPOSTA
+========================================== */
+
+.answer {
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px 40px;
+
+  color: var(--navy);
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  font-size: clamp(2.3rem, 7vw, 6.5rem);
+
+  font-weight: 1000;
+
+  line-height: 0.92;
+
+  letter-spacing: -2px;
+
+  text-wrap: balance;
+}
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.game-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  flex-shrink: 0;
+}
+
+.game-footer > span {
+  font-size: clamp(0.5rem, 1.3vw, 0.8rem);
+
+  letter-spacing: 2px;
+}
+
+.finish-button {
+  flex-shrink: 0;
+
+  padding: 10px 16px;
+
+  border: 3px solid var(--navy);
+
+  background: var(--cyan);
+
+  color: var(--navy);
+
+  font-weight: 900;
+
+  cursor: pointer;
+}
+
+/* ==========================================
+   RESULTADO
+========================================== */
+
+.result-screen {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 30px;
+
+  background: var(--paper);
+
+  text-align: center;
+}
+
+.result-content {
+  width: min(520px, 100%);
+}
+
+.result-title {
+  color: var(--navy);
+
+  font-size: clamp(3rem, 12vw, 5.5rem);
+
+  line-height: 0.9;
+}
+
+.result-title.timeout {
+  color: var(--pink);
+}
+
+.result-label {
+  margin-top: 35px;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  opacity: 0.65;
+}
+
+.result-answer {
+  margin: 12px 0 35px;
+
+  padding: 20px;
+
+  border: 4px solid var(--navy);
+
+  background: var(--yellow);
+
+  color: var(--navy);
+
+  font-size: clamp(1.5rem, 7vw, 2.7rem);
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  text-transform: uppercase;
+}
+
+/* ==========================================
+   AJUSTES CELULARES MENORES
+========================================== */
+
+@media (max-height: 680px) and (orientation: portrait) {
+  .description {
+    margin: 18px auto;
+  }
+
+  .info-grid {
+    margin-bottom: 18px;
+  }
+
+  .start-tip {
+    margin-top: 14px;
+  }
+}
